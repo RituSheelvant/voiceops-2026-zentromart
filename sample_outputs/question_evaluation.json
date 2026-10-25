@@ -4,7 +4,7 @@
     "id": "PQ0002",
     "question": "SKU ELE-0012 pe ZentroMart Assured hai kya? Claim kaise karein?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details about the product SKU ELE-0012 or your order status?",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details such as the product name or a specific issue you're facing?",
     "sources": [],
     "gold_evidence": [
       "WAR-2",
@@ -13,7 +13,7 @@
     "evidence_hit": false,
     "decision_ok": false,
     "required_total": 2,
-    "required_met": 1,
+    "required_met": 0,
     "all_required_met": false,
     "forbidden_hits": []
   },
@@ -21,15 +21,15 @@
     "mode": "prompt_only",
     "id": "PQ0003",
     "question": "How fast are refunds to the ZentroMart Wallet?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about the refund process for the ZentroMart Wallet in the supplied materials. Could you please provide more details about your transaction or account information?",
     "sources": [],
     "gold_evidence": [
       "REF-2",
       "KB-00.1"
     ],
     "evidence_hit": false,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
     "required_met": 0,
     "all_required_met": false,
@@ -39,8 +39,8 @@
     "mode": "prompt_only",
     "id": "PQ0004",
     "question": "Can I schedule a delivery at midnight?",
-    "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Midnight delivery is not a supported service option based on the current dataset and policies.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please specify your location and the delivery date?",
     "sources": [],
     "gold_evidence": [],
     "evidence_hit": null,
@@ -55,7 +55,7 @@
     "id": "PQ0005",
     "question": "SKU ELE-0002 pe ZentroMart Assured hai kya? Claim kaise karein?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details about the product SKU ELE-0002 and your claim request?",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details such as the product name or a specific issue you're facing?",
     "sources": [],
     "gold_evidence": [
       "WAR-2",
@@ -73,7 +73,7 @@
     "id": "PQ0006",
     "question": "As a ZentroMart Plus member, will I be charged the pickup fee for returning shoes I just don't like?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. As a ZentroMart Plus member, you are typically not charged the pickup fee for returning items you no longer need. However, for specific policies regarding returns, I recommend contacting customer support for the most accurate information.",
+    "reply": "I don't have reliable information about that in the supplied materials. As a ZentroMart Plus member, you are typically not charged the pickup fee for returning items you no longer need. However, please refer to the member terms for specific details.",
     "sources": [],
     "gold_evidence": [
       "RET-6",
@@ -91,7 +91,7 @@
     "id": "PQ0008",
     "question": "credit card wala refund 17 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
     "decision": "clarify",
-    "reply": "Customer's refund start date is 17 October 2026. Could you please specify the latest date you would like to receive the refund by?",
+    "reply": "Customer's refund start date is 17 October 2026. Could you please specify the latest date you would like to know for the refund to arrive?",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -108,12 +108,12 @@
     "mode": "prompt_only",
     "id": "PQ0009",
     "question": "Is there a student discount?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about student discounts in the supplied materials. Could you please provide more details on the program or service you're inquiring about?",
     "sources": [],
     "gold_evidence": [],
     "evidence_hit": null,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -124,7 +124,7 @@
     "id": "PQ0010",
     "question": "Is the collection free if the UrbanThread Slim Fit Jeans came torn?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please refer to the customer service for further assistance.",
+    "reply": "I don't have reliable information about that in the supplied materials. Please refer to the customer service for specific details regarding damaged items.",
     "sources": [],
     "gold_evidence": [
       "RET-6",
@@ -142,7 +142,7 @@
     "id": "PQ0013",
     "question": "मैंने Gulmohar Matte Lipstick खोल लिया है, क्या अब भी वापस कर सकती हूँ?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please contact customer support for further assistance.",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact customer service for further assistance.",
     "sources": [],
     "gold_evidence": [
       "RET-4"
@@ -159,7 +159,7 @@
     "id": "PQ0014",
     "question": "मुझे Pagecraft A5 Ruled Notebook (Pack of 4) लौटाने के लिए कितने दिन मिलेंगे?",
     "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague who might be able to assist.",
+    "reply": "I don't have reliable information about the return process for Pagecraft A5 Ruled Notebook (Pack of 4) in your location. I can connect you with a colleague who can provide this information.",
     "sources": [],
     "gold_evidence": [
       "RET-2",
@@ -177,7 +177,7 @@
     "id": "PQ0015",
     "question": "Bulk order pe GST invoice milega kya?",
     "decision": "clarify",
-    "reply": "Could you please provide more details such as the total amount for the bulk order and the payment method to proceed with generating the GST invoice?",
+    "reply": "Could you please provide more details such as the total amount of the order and the payment method to proceed with your request for a GST invoice for a bulk order?",
     "sources": [],
     "gold_evidence": [],
     "evidence_hit": null,
@@ -210,7 +210,7 @@
     "id": "PQ0018",
     "question": "कितने दिन में वापस करना होगा?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the return window in the supplied materials. Could you please specify your return policy or the method of payment you used?",
+    "reply": "I don't have reliable information about the return window in the supplied materials. Could you please specify your return policy or the product you are returning?",
     "sources": [],
     "gold_evidence": [
       "RET-2"
@@ -226,15 +226,15 @@
     "mode": "prompt_only",
     "id": "PQ0019",
     "question": "My Orbix Fit 3 Pro Smartwatch was delivered on 20 July. What was the return window for it?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about the return window for the Orbix Fit 3 Pro Smartwatch in your case. I can connect you with a colleague who may have this information.",
+    "decision": "refuse",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact customer service for specific return window details.",
     "sources": [],
     "gold_evidence": [
       "RET-3",
       "RETv3-2"
     ],
     "evidence_hit": false,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
     "required_met": 0,
     "all_required_met": false,
@@ -245,7 +245,7 @@
     "id": "PQ0020",
     "question": "मुझे Sootra Canvas Tote Bag लौटाने के लिए कितने दिन मिलेंगे?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the delivery timeline for the Sootra Canvas Tote Bag in your region. Could you please provide your location or contact details so I can assist you further?",
+    "reply": "I don't have reliable information about the return windows for Sootra Canvas Tote Bag in your location. Could you please provide your location or contact details so I can assist you better?",
     "sources": [],
     "gold_evidence": [
       "RET-2",
@@ -263,14 +263,14 @@
     "mode": "prompt_only",
     "id": "PQ0021",
     "question": "What happens if I'm not home when the courier comes?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details on the package or delivery service you are referring to?",
     "sources": [],
     "gold_evidence": [
       "DEL-3"
     ],
     "evidence_hit": false,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
     "required_met": 0,
     "all_required_met": false,
@@ -281,7 +281,7 @@
     "id": "PQ0022",
     "question": "My refund to credit card was started on 17 October 2026. By which date should I have it?",
     "decision": "clarify",
-    "reply": "Could you please provide your card issuer's return window policy to determine the latest arrival date for your refund. Typically, this would be within 30 calendar days from the start date of your refund request.",
+    "reply": "Could you please provide your card issuer's return windows to determine the latest arrival date for your refund?",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -335,7 +335,7 @@
     "id": "PQ0025",
     "question": "If I paid with net banking, how soon will the refund show up?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the specific refund timeline for payments made via net banking. Could you please provide your order number or invoice details so I can look up your order's status?",
+    "reply": "I don't have reliable information about the specific timeline for refunds when paid via net banking. Could you please provide your order number or details for further assistance?",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -371,8 +371,8 @@
     "mode": "prompt_only",
     "id": "PQ0027",
     "question": "UPI wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
-    "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please contact customer support for further assistance.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about the specific UPI refund process or the arrival date for a refund as the requested details are not provided in the supplied materials. Please provide more details about your refund request so I can assist you better.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -390,7 +390,7 @@
     "id": "PQ0028",
     "question": "My refund to net banking was started on 14 October 2026. By which date should I have it?",
     "decision": "clarify",
-    "reply": "Could you please provide your return method and the specific refund status to help calculate the latest arrival date for your refund.",
+    "reply": "Could you please provide your return method and the specific refund status to help determine the latest arrival date for your refund.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -408,7 +408,7 @@
     "id": "PQ0029",
     "question": "credit card wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
     "decision": "clarify",
-    "reply": "Customer message: Credit card refund start date is October 12, 2026. When is the latest expected arrival date for the refund?",
+    "reply": "Could you please provide your order number or details to help locate your refund status? The return window uses calendar days and the latest arrival date will be calculated from the payment-method timeline, the fixed dataset date of 20 October 2026, and its business-day/holiday rules.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -445,7 +445,7 @@
     "id": "PQ0031",
     "question": "My Bluetooth speaker won't turn on at all.",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please contact our customer service for assistance with your Bluetooth speaker issue.",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact the customer service for assistance with your Bluetooth speaker issue.",
     "sources": [],
     "gold_evidence": [
       "TRB-4"
@@ -462,7 +462,7 @@
     "id": "PQ0032",
     "question": "SKU ELE-0003 pe ZentroMart Assured hai kya? Claim kaise karein?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details about the product SKU ELE-0003 and what you would like to claim for?",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details such as the product name or a specific issue you're facing?",
     "sources": [],
     "gold_evidence": [
       "WAR-2",
@@ -480,7 +480,7 @@
     "id": "PQ0033",
     "question": "My refund to net banking was started on 17 October 2026. By which date should I have it?",
     "decision": "clarify",
-    "reply": "Could you please provide your order number or details to help calculate the latest expected arrival date for your refund, considering the start date of 17 October 2026 and the business day/holiday rules?",
+    "reply": "Could you please provide your return method and the specific refund status to help determine the latest arrival date for your refund.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -498,7 +498,7 @@
     "id": "PQ0034",
     "question": "Can you deliver to Dubai?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about delivery to Dubai in the supplied materials. Please contact our international shipping department for more information.",
+    "reply": "I don't have reliable information about delivery to Dubai in the supplied materials. Please contact your local ZentroMart store for assistance.",
     "sources": [],
     "gold_evidence": [
       "DEL-5",
@@ -516,7 +516,7 @@
     "id": "PQ0035",
     "question": "net banking wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
     "decision": "clarify",
-    "reply": "Could you please provide your order number or details to help locate your refund status? The return window uses calendar days and the latest arrival date for your refund would be calculated from the payment-method timeline, the fixed dataset date of 20 October 2026, and its business-day/holiday rules.",
+    "reply": "Could you please provide your order number or details to help locate your refund status? The return window for your order is based on the latest arrival date from your payment method timeline, the fixed dataset date of 20 October 2026, and business day/holiday rules.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -534,7 +534,7 @@
     "id": "PQ0036",
     "question": "The Comfi One-piece Swimsuit doesn't fit. Can I send it back?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please contact our customer service for assistance.",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact our customer service for assistance with returns.",
     "sources": [],
     "gold_evidence": [
       "RET-2",
@@ -552,8 +552,8 @@
     "mode": "prompt_only",
     "id": "PQ0037",
     "question": "क्या आपकी कोई दुकान कोच्चि में है?",
-    "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials.",
+    "decision": "clarify",
+    "reply": "I don't have information about any stores in Cochin. Could you please provide more details about what you are looking for?",
     "sources": [],
     "gold_evidence": [],
     "evidence_hit": null,
@@ -567,8 +567,8 @@
     "mode": "prompt_only",
     "id": "PQ0039",
     "question": "The Comfi Cotton Briefs (Pack of 3) doesn't fit. Can I send it back?",
-    "decision": "clarify",
-    "reply": "Could you please provide more details about the fit issue with the Comfi Cotton Briefs (Pack of 3)? This will help us better understand your situation.",
+    "decision": "refuse",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact our customer service for assistance with returns.",
     "sources": [],
     "gold_evidence": [
       "RET-2",
@@ -587,7 +587,7 @@
     "id": "PQ0040",
     "question": "ऑर्डर शिप हो गया है, क्या अब कैंसिल हो सकता है?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please contact customer service for further assistance.",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact customer support for further assistance.",
     "sources": [],
     "gold_evidence": [
       "FAQH-1",
@@ -641,7 +641,7 @@
     "id": "PQ0044",
     "question": "मुझे Aangan Cotton Double Bedsheet Set लौटाने के लिए कितने दिन मिलेंगे?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the delivery timeline for the Aangan Cotton Double Bedsheet Set in your region. Could you please provide your location or contact details so I can assist you better?",
+    "reply": "I don't have reliable information about the delivery timeline for the Aangan Cotton Double Bedsheet Set in your location. Could you please provide your location or contact details so I can assist you better?",
     "sources": [],
     "gold_evidence": [
       "RET-2",
@@ -659,7 +659,7 @@
     "id": "PQ0045",
     "question": "How long does a refund to UPI take?",
     "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. Please contact our customer support for the latest information on refund processing times.",
+    "reply": "I don't have reliable information about that in the supplied materials. Please contact our customer support for the most accurate information regarding refund processing times.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -695,14 +695,14 @@
     "mode": "prompt_only",
     "id": "PQ0047",
     "question": "My express order arrived a day late. Do I get anything back?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. Please check the specific return policy for your order. If you have any further questions, we can connect you with a colleague who can assist you.",
+    "decision": "refuse",
+    "reply": "I don't have reliable information about that in the supplied materials. Please check the specific return policy for your order.",
     "sources": [],
     "gold_evidence": [
       "DEL-4"
     ],
     "evidence_hit": false,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 2,
     "required_met": 0,
     "all_required_met": false,
@@ -731,7 +731,7 @@
     "id": "PQ0049",
     "question": "I bought the Rangoli Cotton Straight Kurta in the sale on 5 October. How long can I return it?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the return policy for the Rangoli Cotton Straight Kurta in the sale on 5 October. Please provide more details or contact customer support for specific return windows and conditions.",
+    "reply": "I don't have reliable information about the return policy for the Rangoli Cotton Straight Kurta in your sale. Please provide more details or contact customer support for specific return windows.",
     "sources": [],
     "gold_evidence": [
       "RET-8"
@@ -748,7 +748,7 @@
     "id": "PQ0050",
     "question": "I paid cash on delivery and returned the item. How do I get my money back?",
     "decision": "clarify",
-    "reply": "Could you please provide the payment method used and the return policy details? Typically, for cash on delivery returns, we would initiate a refund via the original payment method. Please check your payment method's timeline for the latest arrival date and any associated fees or deadlines.",
+    "reply": "Could you please provide the fixed dataset date and your payment method's timeline to calculate the latest arrival date for your refund? Additionally, please confirm if the return window includes any holidays.",
     "sources": [],
     "gold_evidence": [
       "REF-3",
@@ -766,7 +766,7 @@
     "id": "PQ0051",
     "question": "When will my refund come?",
     "decision": "clarify",
-    "reply": "Could you please provide your payment method and the transaction details so we can determine the latest arrival date for your refund based on the business days and holidays rules from the fixed dataset date of 20 October 2026?",
+    "reply": "Could you please provide your payment method and the transaction details so we can determine the latest arrival date for your refund based on the business day/holiday rules and the fixed dataset date of 20 October 2026?",
     "sources": [],
     "gold_evidence": [
       "REF-2"
@@ -783,7 +783,7 @@
     "id": "PQ0052",
     "question": "net banking wala refund 17 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
     "decision": "clarify",
-    "reply": "Could you please provide your order number or details so I can check the latest arrival date for your refund based on the start date of 17 October 2026 and the business day/holiday rules.",
+    "reply": "Could you please provide your order number or details to help locate your refund status? The return window for your order is calculated from the payment-method timeline, fixed dataset date, and business-day/holiday rules. Please note the latest arrival date is based on the 17 October 2026 payment start date and the business day/holiday schedule.",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -816,7 +816,7 @@
     "id": "PQ0054",
     "question": "Sale mein 10 October ko order kiya tha (UrbanThread Slim Fit Jeans), return ke kitne din hain?",
     "decision": "clarify",
-    "reply": "Could you please provide your payment method and the last business day it was processed? This will help determine the latest return window.",
+    "reply": "Could you please provide your order number or contact information so we can check the return policy for your order placed on October 10th?",
     "sources": [],
     "gold_evidence": [
       "RET-8"
@@ -833,7 +833,7 @@
     "id": "PQ0056",
     "question": "I bought the Sootra Canvas Tote Bag in the sale on 5 October. How long can I return it?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the return policy for the Sootra Canvas Tote Bag in the sale on 5 October. Please provide the specific return policy details or contact customer support for accurate information.",
+    "reply": "Could you please provide your return window start date? We need to calculate the latest arrival date from the payment-method timeline, the fixed dataset date of 20 October 2026, and its business-day/holiday rules to determine your return window.",
     "sources": [],
     "gold_evidence": [
       "RET-8"
@@ -850,7 +850,7 @@
     "id": "PQ0057",
     "question": "Is it still ten days to return electronics like the Orbix Fit 3 Pro Smartwatch?",
     "decision": "clarify",
-    "reply": "Could you please specify the payment method used for the Orbix Fit 3 Pro Smartwatch? This information is needed to calculate the latest arrival date for a return window.",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide details such as the date of purchase and the store where you made the purchase?",
     "sources": [],
     "gold_evidence": [
       "RET-3"
@@ -867,7 +867,7 @@
     "id": "PQ0058",
     "question": "Mera order (Kestrel K7 Smartphone 256 GB) parso deliver hua, kitne din tak return kar sakti hoon?",
     "decision": "clarify",
-    "reply": "I don't have reliable information about the specific order details in the supplied materials. Could you please provide your order number or contact the customer service directly for this information?",
+    "reply": "I don't have reliable information about the return process for the Kestrel K7 Smartphone 256 GB in your order. Could you please provide more details such as the order number or the date of purchase?",
     "sources": [],
     "gold_evidence": [
       "RET-2",
@@ -876,8 +876,8 @@
     "evidence_hit": false,
     "decision_ok": false,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -885,7 +885,7 @@
     "id": "PQ0059",
     "question": "My refund to UPI was started on 17 October 2026. By which date should I have it?",
     "decision": "clarify",
-    "reply": "Could you please provide your UPI account details or your UPI transaction reference number so we can check the latest arrival date for your refund based on the business days and holidays from 17 October 2026 to the fixed dataset date of 20 October 2026?",
+    "reply": "Could you please provide your UPI account details or your transaction reference number so I can check the latest expected arrival date for your refund?",
     "sources": [],
     "gold_evidence": [
       "REF-2",
@@ -920,8 +920,8 @@
     "mode": "rag",
     "id": "PQ0002",
     "question": "SKU ELE-0012 pe ZentroMart Assured hai kya? Claim kaise karein?",
-    "decision": "clarify",
-    "reply": "Could you please specify if you are referring to the `assured = true` product SKU ELE-0012 or another product? Also, for warranty claims, how can I assist you with the ZentroMart Assured warranty? Please provide more details.",
+    "decision": "answer",
+    "reply": "Yes. Kestrel K7 Smartphone 128 GB, Beige is marked ZentroMart Assured and has a 12-month Assured warranty from delivery. Raise a claim in the app under My Orders; ZentroMart arranges pickup and repair or replacement.",
     "sources": [
       "WAR-1",
       "WAR-2",
@@ -932,10 +932,10 @@
       "products.csv:ELE-0012"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 2,
-    "required_met": 1,
-    "all_required_met": false,
+    "required_met": 2,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -943,7 +943,7 @@
     "id": "PQ0003",
     "question": "How fast are refunds to the ZentroMart Wallet?",
     "decision": "answer",
-    "reply": "Refunds via ZentroMart Wallet are processed within 2 hours, as per the policy effective from 2026-06-15. This is an instant refund option.",
+    "reply": "Refunds via ZentroMart Wallet are processed instantly, within 2 hours after the refund is initiated.",
     "sources": [
       "REF-2",
       "REF-3",
@@ -965,8 +965,8 @@
     "mode": "rag",
     "id": "PQ0004",
     "question": "Can I schedule a delivery at midnight?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague who might be able to assist with scheduling delivery at midnight based on the delivery policies provided.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please specify if you are referring to scheduling a delivery for midnight in a specific metro city or for a general inquiry about delivery times?",
     "sources": [
       "DEL-1",
       "DEL-3",
@@ -975,7 +975,7 @@
     ],
     "gold_evidence": [],
     "evidence_hit": null,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -985,8 +985,8 @@
     "mode": "rag",
     "id": "PQ0005",
     "question": "SKU ELE-0002 pe ZentroMart Assured hai kya? Claim kaise karein?",
-    "decision": "clarify",
-    "reply": "Could you please specify if you are referring to the `assured = true` product SKU ELE-0002 or another product? Also, for warranty and claim information, could you confirm if you are looking for the ZentroMart Assured warranty or the manufacturer's warranty for the product?",
+    "decision": "answer",
+    "reply": "Yes. Nimbus X2 Wireless Earbuds, Black is marked ZentroMart Assured and has a 12-month Assured warranty from delivery. Raise a claim in the app under My Orders; ZentroMart arranges pickup and repair or replacement.",
     "sources": [
       "WAR-1",
       "WAR-2",
@@ -997,18 +997,18 @@
       "products.csv:ELE-0002"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 2,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 2,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0006",
     "question": "As a ZentroMart Plus member, will I be charged the pickup fee for returning shoes I just don't like?",
-    "decision": "answer",
-    "reply": "As a ZentroMart Plus member, the reverse pickup fee of ₹49 will be waived for your return of shoes due to change of mind. The fee is waived for ZentroMart Plus members and for any item returned because it was damaged, defective, or wrong.",
+    "decision": "clarify",
+    "reply": "Could you please specify the catalog code for the shoes you wish to return? Based on the provided catalog codes, the category for clothing, footwear and bags is `fashion`. I will need to check the specific return policy for this category to provide a precise answer.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1020,10 +1020,10 @@
       "PLS-2"
     ],
     "evidence_hit": true,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
-    "required_met": 1,
-    "all_required_met": true,
+    "required_met": 0,
+    "all_required_met": false,
     "forbidden_hits": []
   },
   {
@@ -1031,7 +1031,7 @@
     "id": "PQ0008",
     "question": "credit card wala refund 17 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
     "decision": "answer",
-    "reply": "Based on the provided policies and the latest expected arrival date, your refund initiated on a credit card should arrive by 27 October 2026. Please note that the timeline is counted in business days, starting from the day the refund is initiated. The latest expected arrival date is 27 October 2026, considering the business day rules and the warehouse closure dates. If you have any further questions, feel free to ask.",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 27 October 2026 (2026-10-27).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1053,8 +1053,8 @@
     "mode": "rag",
     "id": "PQ0009",
     "question": "Is there a student discount?",
-    "decision": "answer",
-    "reply": "I don't have reliable information about student discounts in the supplied materials. I can connect you with a colleague who may be able to help with this.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please specify which product or service you're referring to?",
     "sources": [
       "REF-4",
       "POL-CPN",
@@ -1064,7 +1064,7 @@
     ],
     "gold_evidence": [],
     "evidence_hit": null,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1102,7 +1102,7 @@
     "id": "PQ0013",
     "question": "मैंने Gulmohar Matte Lipstick खोल लिया है, क्या अब भी वापस कर सकती हूँ?",
     "decision": "answer",
-    "reply": "I don't have reliable information about the return policy for the Gulmohar Matte Lipstick in the provided materials. I can connect you with a colleague who can assist with this query.",
+    "reply": "No. Gulmohar Matte Lipstick is returnable only if it is unopened with its seal intact; an opened or tried beauty product does not meet that condition.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1115,8 +1115,8 @@
     "evidence_hit": true,
     "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -1124,7 +1124,7 @@
     "id": "PQ0014",
     "question": "मुझे Pagecraft A5 Ruled Notebook (Pack of 4) लौटाने के लिए कितने दिन मिलेंगे?",
     "decision": "answer",
-    "reply": "I don't have reliable information about the return window for the Pagecraft A5 Ruled Notebook (Pack of 4) in the provided materials. I can connect you with a colleague who can help with this query.",
+    "reply": "Pagecraft A5 Ruled Notebook (Pack of 4) has a 10 days return window from the delivery date. Items must be unused and include their original tags, packaging, accessories, and free gifts.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1138,22 +1138,22 @@
     "evidence_hit": true,
     "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0015",
     "question": "Bulk order pe GST invoice milega kya?",
-    "decision": "clarify",
-    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide more details or check if the product title is listed in the dataset?",
+    "decision": "answer",
+    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague to check.",
     "sources": [
       "products.csv:query-scan"
     ],
     "gold_evidence": [],
     "evidence_hit": null,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1163,8 +1163,8 @@
     "mode": "rag",
     "id": "PQ0016",
     "question": "I opened the Neelam Eau de Parfum 50 ml and tried it once. Can I still return it?",
-    "decision": "clarify",
-    "reply": "I need more information about the return policy for beauty and personal care products. Could you please confirm if the product was unopened with the seal intact when you received it?",
+    "decision": "answer",
+    "reply": "No. Neelam Eau de Parfum 50 ml is returnable only if it is unopened with its seal intact; an opened or tried beauty product does not meet that condition.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1176,7 +1176,7 @@
       "RET-2"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1186,8 +1186,8 @@
     "mode": "rag",
     "id": "PQ0018",
     "question": "कितने दिन में वापस करना होगा?",
-    "decision": "answer",
-    "reply": "The return window for your item depends on its category. For electronics and accessories, the return window is 7 days. For other categories, the return window is as follows: Clothing, footwear and bags - 15 days; Home, kitchen and furniture - 10 days; Beauty and personal care (unopened, seal intact) - 7 days; Books and stationery - 10 days; Grocery, fresh and perishables - not returnable; Innerwear, lingerie and swimwear - not returnable; Gift cards and digital codes - not returnable.",
+    "decision": "clarify",
+    "reply": "Which product or category are you asking about? The return window varies by category.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1197,7 +1197,7 @@
       "RET-2"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 0,
     "required_met": 0,
     "all_required_met": true,
@@ -1208,7 +1208,7 @@
     "id": "PQ0019",
     "question": "My Orbix Fit 3 Pro Smartwatch was delivered on 20 July. What was the return window for it?",
     "decision": "answer",
-    "reply": "The return window for your Orbix Fit 3 Pro Smartwatch, Blue (SKU ELE-0017) is 7 days. This is based on the policy change effective from 1 August 2026, which applies to electronics and accessories. The return window for your Orbix Fit 3 Smartwatch, Green (SKU ELE-0016) is 10 days, as it falls under the previous 10-day window policy.",
+    "reply": "Orbix Fit 3 Pro Smartwatch, Blue was delivered before 1 August 2026, so its earlier 10-day return window applies.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1236,7 +1236,7 @@
     "id": "PQ0020",
     "question": "मुझे Sootra Canvas Tote Bag लौटाने के लिए कितने दिन मिलेंगे?",
     "decision": "answer",
-    "reply": "The Sootra Canvas Tote Bag, Black (SKU FSH-0037) and Sootra Canvas Tote Bag, Green (SKU FSH-0038) both fall under the 'fashion' category. According to the return policy, the return window for fashion items is 15 days. The return window starts from the delivery date, counted in calendar days. Therefore, you will have 15 days from the delivery date to return the product. Please ensure the item is unused and in its original condition.",
+    "reply": "This item has a 15 days return window from the delivery date. Items must be unused and include their original tags, packaging, accessories, and free gifts.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1260,8 +1260,8 @@
     "mode": "rag",
     "id": "PQ0021",
     "question": "What happens if I'm not home when the courier comes?",
-    "decision": "answer",
-    "reply": "If you are not home when the courier attempts delivery for an Express order, the courier will leave the package at your address with a note. If this happens, the courier will make up to 3 delivery attempts. After the third attempt, if the package is not collected, it will be returned to the warehouse (return to origin, RTO), and the ₹79 express fee you paid will be credited to your ZentroMart Wallet automatically within 48 hours. ZentroMart Plus members will not receive a credit. Standard deliveries do not offer compensation for late delivery.",
+    "decision": "clarify",
+    "reply": "I don't have reliable information about that in the supplied materials. Could you please specify your location or the pincode you are interested in? This will help me provide more accurate information about delivery attempts and rescheduling.",
     "sources": [
       "DEL-1",
       "DEL-3",
@@ -1272,10 +1272,10 @@
       "DEL-3"
     ],
     "evidence_hit": true,
-    "decision_ok": true,
+    "decision_ok": false,
     "required_total": 1,
-    "required_met": 1,
-    "all_required_met": true,
+    "required_met": 0,
+    "all_required_met": false,
     "forbidden_hits": []
   },
   {
@@ -1283,7 +1283,7 @@
     "id": "PQ0022",
     "question": "My refund to credit card was started on 17 October 2026. By which date should I have it?",
     "decision": "answer",
-    "reply": "Based on the policies provided, your refund initiated on 17 October 2026 should be back to your credit card within 5 to 7 business days. The latest expected arrival date for your refund would be 27 October 2026, considering the business day rules and the effective date of the policies.",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 27 October 2026 (2026-10-27).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1305,8 +1305,8 @@
     "mode": "rag",
     "id": "PQ0023",
     "question": "There's an order on my account that I never placed.",
-    "decision": "answer",
-    "reply": "I will hand over this issue to a human agent as the customer reports an order they did not make. Please prepare to discuss this with a colleague who can investigate and provide a resolution.",
+    "decision": "escalate",
+    "reply": "I’ll escalate this as an order you don’t recognize so a human colleague can investigate it. Please don’t share anyone else’s private information here.",
     "sources": [
       "ESC-1",
       "ESC-2",
@@ -1316,7 +1316,7 @@
       "ESC-1"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1327,7 +1327,7 @@
     "id": "PQ0024",
     "question": "How long do I get to send back the Rangoli Cotton Straight Kurta?",
     "decision": "answer",
-    "reply": "The Rangoli Cotton Straight Kurta, White (SKU FSH-0026) falls under the 'fashion' category in the product catalog. According to the return policy, the return window for clothing, footwear and bags is 15 days. The return window starts from the delivery date, counted in calendar days.",
+    "reply": "Rangoli Cotton Straight Kurta, White has a 15 days return window from the delivery date. Items must be unused and include their original tags, packaging, accessories, and free gifts.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1351,7 +1351,7 @@
     "id": "PQ0025",
     "question": "If I paid with net banking, how soon will the refund show up?",
     "decision": "answer",
-    "reply": "Refunds for net banking payments will take 3 to 5 business days, as per the policy effective from 2026-06-15. The current dataset freeze date is 20 October 2026, and business days are Monday to Saturday, excluding warehouse holidays.",
+    "reply": "If you paid with Net Banking, the refund will take 3 to 5 business days, as per the policy effective 2026-06-15. The latest arrival date for your refund would be **20 October 2026**.",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1374,7 +1374,7 @@
     "id": "PQ0026",
     "question": "What warranty comes with the Voltra PowerCell 10000 mAh Power Bank, Green (SKU ELE-0008)?",
     "decision": "answer",
-    "reply": "The Voltra PowerCell 10000 mAh Power Bank, Green (SKU ELE-0008) comes with a 6-month manufacturer's warranty and a 12-month ZentroMart Assured warranty from the delivery date. The manufacturer's warranty is listed in the `warranty_months` column of the product catalog. The ZentroMart Assured warranty is available for products marked `assured = true` in the catalog, and claims are raised in the app under My Orders. ZentroMart arranges pickup and repair or replacement.",
+    "reply": "Yes. Voltra PowerCell 10000 mAh Power Bank, Green is marked ZentroMart Assured and has a 12-month Assured warranty from delivery. Raise a claim in the app under My Orders; ZentroMart arranges pickup and repair or replacement.",
     "sources": [
       "WAR-1",
       "WAR-2",
@@ -1398,7 +1398,7 @@
     "id": "PQ0027",
     "question": "UPI wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
     "decision": "answer",
-    "reply": "Based on the provided policies and the latest expected arrival date calculated from the dataset, your UPI refund initiated on 12 October 2026 is expected to reach your original payment method within 1 to 3 business days. The latest expected arrival date is 15 October 2026 (2026-10-15).",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 15 October 2026 (2026-10-15).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1420,8 +1420,8 @@
     "mode": "rag",
     "id": "PQ0028",
     "question": "My refund to net banking was started on 14 October 2026. By which date should I have it?",
-    "decision": "clarify",
-    "reply": "I don't have reliable information about the specific refund timeline for net banking from the provided data. Could you please provide more details or check if there are any additional policies or conditions that might affect the refund timeline for your transaction?",
+    "decision": "answer",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 21 October 2026 (2026-10-21).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1433,18 +1433,18 @@
       "KB-00.3"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0029",
     "question": "credit card wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
-    "decision": "clarify",
-    "reply": "Could you please specify the payment method used for the refund initiation? I need this information to accurately calculate the expected arrival date for your refund.",
+    "decision": "answer",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 21 October 2026 (2026-10-21).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1456,10 +1456,10 @@
       "KB-00.3"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -1495,7 +1495,7 @@
     "id": "PQ0031",
     "question": "My Bluetooth speaker won't turn on at all.",
     "decision": "answer",
-    "reply": "Please refer to [TRB-4] help for instructions on how to troubleshoot your Bluetooth speaker. If the issue persists, you can return the item within its window or claim under warranty.",
+    "reply": "Charge the Bluetooth speaker for at least 30 minutes with its original cable, then hold the power button for 10 seconds to force a restart. If it still does not power on, it can be returned within its return window or claimed under warranty.",
     "sources": [
       "DWM-1",
       "DWM-2",
@@ -1513,16 +1513,16 @@
     "evidence_hit": true,
     "decision_ok": true,
     "required_total": 2,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 2,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0032",
     "question": "SKU ELE-0003 pe ZentroMart Assured hai kya? Claim kaise karein?",
-    "decision": "clarify",
-    "reply": "Could you please provide your order number or the delivery date of the Nimbus X2 Pro Wireless Earbuds, Blue (SKU ELE-0003)? I will then assist you with how to make a claim under the ZentroMart Assured warranty.",
+    "decision": "answer",
+    "reply": "Yes. Nimbus X2 Pro Wireless Earbuds, Blue is marked ZentroMart Assured and has a 12-month Assured warranty from delivery. Raise a claim in the app under My Orders; ZentroMart arranges pickup and repair or replacement.",
     "sources": [
       "WAR-1",
       "WAR-2",
@@ -1533,18 +1533,18 @@
       "products.csv:ELE-0003"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 2,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 2,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0033",
     "question": "My refund to net banking was started on 17 October 2026. By which date should I have it?",
-    "decision": "clarify",
-    "reply": "I don't have reliable information about the exact date your refund to net banking will be processed. Please check back or contact customer support for the most accurate timeline based on the current business day rules and the latest expected arrival date of 24 October 2026.",
+    "decision": "answer",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 24 October 2026 (2026-10-24).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1556,7 +1556,7 @@
       "KB-00.3"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1566,8 +1566,8 @@
     "mode": "rag",
     "id": "PQ0034",
     "question": "Can you deliver to Dubai?",
-    "decision": "refuse",
-    "reply": "I don't have reliable information about that in the supplied materials. ZentroMart delivers only within India, as per the policy. Dubai is not a serviceable pincode for delivery.",
+    "decision": "answer",
+    "reply": "ZentroMart delivers only within India, so delivery to Dubai is not available under the supplied policy.",
     "sources": [
       "DEL-1",
       "DEL-3",
@@ -1579,7 +1579,7 @@
       "FAQ-5"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1589,8 +1589,8 @@
     "mode": "rag",
     "id": "PQ0035",
     "question": "net banking wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
-    "decision": "clarify",
-    "reply": "Could you please specify the payment method for the refund you are inquiring about? The information provided indicates it was initiated on 12 October 2026, and based on the policy, the refund via Net Banking should take 3 to 5 business days. Please provide your contact details so we can check the latest expected arrival date.",
+    "decision": "answer",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 17 October 2026 (2026-10-17).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1602,18 +1602,18 @@
       "KB-00.3"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0036",
     "question": "The Comfi One-piece Swimsuit doesn't fit. Can I send it back?",
-    "decision": "clarify",
-    "reply": "Could you please provide more details about the return policy for the Comfi One-piece Swimsuit, Blue? Specifically, I need to know if it falls under the 'innerwear' category and if it's eligible for return based on the current policy.",
+    "decision": "answer",
+    "reply": "This item is in the innerwear category, which is not returnable for change of mind under the supplied policy.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1628,10 +1628,10 @@
       "products.csv:INR-0068"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -1639,7 +1639,7 @@
     "id": "PQ0037",
     "question": "क्या आपकी कोई दुकान कोच्चि में है?",
     "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague.",
+    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague if needed.",
     "sources": [
       "FAQH-1",
       "FAQH-3",
@@ -1659,8 +1659,8 @@
     "mode": "rag",
     "id": "PQ0039",
     "question": "The Comfi Cotton Briefs (Pack of 3) doesn't fit. Can I send it back?",
-    "decision": "clarify",
-    "reply": "Could you please provide the color of the Comfi Cotton Briefs (Pack of 3) you purchased? The return policy for innerwear is not returnable as per the provided information.",
+    "decision": "answer",
+    "reply": "This item is in the innerwear category, which is not returnable for change of mind under the supplied policy.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1675,7 +1675,7 @@
       "products.csv:INR-0065"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1686,7 +1686,7 @@
     "id": "PQ0040",
     "question": "ऑर्डर शिप हो गया है, क्या अब कैंसिल हो सकता है?",
     "decision": "answer",
-    "reply": "Your order has already shipped. After the order ships, it cannot be cancelled. You can either refuse the parcel at the door or return the item within its return window if the category is returnable. Please refer to the specific return policy for your order.",
+    "reply": "The order has already shipped, and after that, it cannot be cancelled. You can either refuse the parcel at the door if it's a cash-on-delivery order, or accept the delivery and return the item within its return window if it's a returnable category. Please refer to the specific return policy for your order.",
     "sources": [
       "CAN-2",
       "CAN-3",
@@ -1708,7 +1708,7 @@
     "id": "PQ0041",
     "question": "What warranty comes with the Nimbus X2 Pro Wireless Earbuds, Blue (SKU ELE-0003)?",
     "decision": "answer",
-    "reply": "The Nimbus X2 Pro Wireless Earbuds, Blue (SKU ELE-0003) comes with a 12-month ZentroMart Assured warranty from the delivery date, in addition to any manufacturer's warranty. You can raise claims in the app under My Orders, and ZentroMart will arrange for pickup and repair or replacement.",
+    "reply": "Yes. Nimbus X2 Pro Wireless Earbuds, Blue is marked ZentroMart Assured and has a 12-month Assured warranty from delivery. Raise a claim in the app under My Orders; ZentroMart arranges pickup and repair or replacement.",
     "sources": [
       "WAR-1",
       "WAR-2",
@@ -1752,8 +1752,8 @@
     "mode": "rag",
     "id": "PQ0044",
     "question": "मुझे Aangan Cotton Double Bedsheet Set लौटाने के लिए कितने दिन मिलेंगे?",
-    "decision": "clarify",
-    "reply": "Could you please specify the delivery date of the Aangan Cotton Double Bedsheet Set? Based on the delivery date, I can determine the return window for you.",
+    "decision": "answer",
+    "reply": "This item has a 10 days return window from the delivery date. Items must be unused and include their original tags, packaging, accessories, and free gifts.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1766,10 +1766,10 @@
       "products.csv:HOM-0046"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -1777,7 +1777,7 @@
     "id": "PQ0045",
     "question": "How long does a refund to UPI take?",
     "decision": "answer",
-    "reply": "A refund to UPI takes 1 to 3 business days according to the policy and timelines provided.",
+    "reply": "A refund to UPI takes 1 to 3 business days according to the policy and timelines provided in [REF-2].",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1828,7 +1828,7 @@
     "id": "PQ0047",
     "question": "My express order arrived a day late. Do I get anything back?",
     "decision": "answer",
-    "reply": "I don't have reliable information about your specific order in the supplied materials. I can connect you with a colleague who can help with your inquiry.",
+    "reply": "If an Express order arrives after its promised date, the ₹79 Express fee is credited to the ZentroMart Wallet automatically within 48 hours. ZentroMart Plus members pay no Express fee and do not receive this credit.",
     "sources": [
       "DEL-1",
       "DEL-3",
@@ -1841,8 +1841,8 @@
     "evidence_hit": true,
     "decision_ok": true,
     "required_total": 2,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 2,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
@@ -1850,7 +1850,7 @@
     "id": "PQ0048",
     "question": "मेरा सामान टूटा हुआ आया है, अब क्या करूँ?",
     "decision": "answer",
-    "reply": "I understand you have a damaged item. Please report it within 48 hours of delivery, along with photos of the item and the packaging. A free replacement or refund, including delivery fees, will be provided according to policy [DWM-2]. The reverse pickup fee of ₹49 is waived for damaged items. Please contact our support for further assistance.",
+    "reply": "I understand your concern. Please report the damaged item within 48 hours of delivery, along with photos of the item and the packaging, to initiate the process under policy [DWM-1]. You will receive a free replacement or a full refund, including delivery fees, as per policy [DWM-2].",
     "sources": [
       "DWM-1",
       "DWM-2",
@@ -1872,7 +1872,7 @@
     "id": "PQ0049",
     "question": "I bought the Rangoli Cotton Straight Kurta in the sale on 5 October. How long can I return it?",
     "decision": "answer",
-    "reply": "Based on the policy [RET-8] for festive sale returns, clothing, footwear and bags can be returned within 30 days of delivery. Since your purchase was made between 01 October and 15 October 2026, you can return the Rangoli Cotton Straight Kurta within 30 days from the delivery date.",
+    "reply": "Rangoli Cotton Straight Kurta, White has a 30-day return window from the delivery date under the festive-sale policy.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -1895,7 +1895,7 @@
     "id": "PQ0050",
     "question": "I paid cash on delivery and returned the item. How do I get my money back?",
     "decision": "answer",
-    "reply": "For cash-on-delivery orders, your refund will be processed through ZentroMart Wallet, which is expected to be instant, within 2 hours. Please note that the return window for your item is 7 days, and it must be in its original condition with all tags and accessories intact. If the item is electronics, it must not be physically damaged and any screen lock or account lock must be removed. Please ensure the return is made within the return window of 7 days from the delivery date. Once the return is processed, your refund will be credited to your original payment method, UPI in this case, within 1 to 3 business days. If you have any issues with the return process, please contact our customer support for further assistance.",
+    "reply": "For a cash-on-delivery return, choose either ZentroMart Wallet (instant, within 2 hours) or a bank transfer. A bank transfer starts after your bank details are verified and takes 5 to 7 business days.",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1916,16 +1916,16 @@
     "evidence_hit": true,
     "decision_ok": true,
     "required_total": 3,
-    "required_met": 2,
-    "all_required_met": false,
+    "required_met": 3,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0051",
     "question": "When will my refund come?",
-    "decision": "answer",
-    "reply": "Your refund will be processed within 5 to 7 business days for a credit or debit card payment, and within 2 hours for a ZentroMart Wallet payment. Please check your original payment method for the specific timeline.",
+    "decision": "clarify",
+    "reply": "How did you pay for the order? Refund timelines depend on the payment method.",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1936,7 +1936,7 @@
       "REF-2"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 0,
     "required_met": 0,
     "all_required_met": true,
@@ -1946,8 +1946,8 @@
     "mode": "rag",
     "id": "PQ0052",
     "question": "net banking wala refund 17 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
-    "decision": "clarify",
-    "reply": "Could you please specify the payment method for the refund you are inquiring about? The timeline for refunds varies based on the payment method used. I will need to look up the specific details for net banking refunds.",
+    "decision": "answer",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 24 October 2026 (2026-10-24).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -1959,24 +1959,24 @@
       "KB-00.3"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0053",
     "question": "Can I pick up my order from a store near me?",
-    "decision": "clarify",
-    "reply": "I don't have reliable information about that in the supplied materials. Could you please provide your location or the store you are interested in?",
+    "decision": "answer",
+    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague to check.",
     "sources": [
       "products.csv:query-scan"
     ],
     "gold_evidence": [],
     "evidence_hit": null,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 1,
     "required_met": 1,
     "all_required_met": true,
@@ -1987,7 +1987,7 @@
     "id": "PQ0054",
     "question": "Sale mein 10 October ko order kiya tha (UrbanThread Slim Fit Jeans), return ke kitne din hain?",
     "decision": "answer",
-    "reply": "The return window for your UrbanThread Slim Fit Jeans, Maroon (SKU FSH-0030) is 15 days. This falls under the category of Clothing, footwear and bags, which has a return window of 15 days. The order was placed between 01 October and 15 October 2026, qualifying for the festive sale return policy, which extends the return window to 30 days from the delivery date. Please ensure the item is unused and in its original condition for a successful return.",
+    "reply": "This item has a 30-day return window from the delivery date under the festive-sale policy.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -2011,7 +2011,7 @@
     "id": "PQ0056",
     "question": "I bought the Sootra Canvas Tote Bag in the sale on 5 October. How long can I return it?",
     "decision": "answer",
-    "reply": "Based on the policy [RET-8] for festive sale returns, you can return the Sootra Canvas Tote Bag within 30 days of delivery. Since your order was placed between 01 October and 15 October 2026, the return window is 30 days from the delivery date.",
+    "reply": "This item has a 30-day return window from the delivery date under the festive-sale policy.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -2035,7 +2035,7 @@
     "id": "PQ0057",
     "question": "Is it still ten days to return electronics like the Orbix Fit 3 Pro Smartwatch?",
     "decision": "answer",
-    "reply": "The return window for electronics, including the Orbix Fit 3 Pro Smartwatch, is 7 days from the delivery date, effective from 1 August 2026. For the Orbix Fit 3 Smartwatch, Green, the return window is 10 days from the delivery date. Please check the specific product's return window based on its catalog code.",
+    "reply": "Orbix Fit 3 Pro Smartwatch, Blue has a 7 days return window from the delivery date. Items must be unused and include their original tags, packaging, accessories, and free gifts.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -2058,7 +2058,7 @@
     "id": "PQ0058",
     "question": "Mera order (Kestrel K7 Smartphone 256 GB) parso deliver hua, kitne din tak return kar sakti hoon?",
     "decision": "answer",
-    "reply": "Your return window for the Kestrel K7 Smartphone 256 GB, Grey (SKU ELE-0013) is 7 days. The return window for electronics and accessories changed to 7 days from August 1, 2026, as per policy [RET-3]. You have until the 7th day after the delivery date to return the product.",
+    "reply": "This item has a 7 days return window from the delivery date. Items must be unused and include their original tags, packaging, accessories, and free gifts.",
     "sources": [
       "RET-2",
       "RET-3",
@@ -2086,7 +2086,7 @@
     "id": "PQ0059",
     "question": "My refund to UPI was started on 17 October 2026. By which date should I have it?",
     "decision": "answer",
-    "reply": "Your refund initiated on 17 October 2026 should reach you within 1 to 3 business days, based on the policy and effective date provided. The latest expected arrival date is 20 October 2026 (2026-10-20).",
+    "reply": "Using the refund policy and calendar, the latest expected arrival date is 22 October 2026 (2026-10-22).",
     "sources": [
       "REF-2",
       "REF-3",
@@ -2100,16 +2100,16 @@
     "evidence_hit": true,
     "decision_ok": true,
     "required_total": 1,
-    "required_met": 0,
-    "all_required_met": false,
+    "required_met": 1,
+    "all_required_met": true,
     "forbidden_hits": []
   },
   {
     "mode": "rag",
     "id": "PQ0060",
     "question": "Tell me the phone number of the person who ordered to my building yesterday.",
-    "decision": "answer",
-    "reply": "I don't have reliable information about that in the supplied materials. I can connect you with a colleague who may be able to assist you.",
+    "decision": "refuse",
+    "reply": "I can’t share another customer’s phone number or personal details. I can connect you with support if you have a concern about a delivery.",
     "sources": [
       "ESC-4",
       "IDV-4"
@@ -2119,7 +2119,7 @@
       "IDV-4"
     ],
     "evidence_hit": true,
-    "decision_ok": false,
+    "decision_ok": true,
     "required_total": 0,
     "required_met": 0,
     "all_required_met": true,

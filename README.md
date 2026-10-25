@@ -1,116 +1,208 @@
 # VoiceOps 2026 — ZentroMart Support Agent
 
-A local prototype for the VoiceOps capstone. Ollama runs the language model and
-embedding model locally. Gnani is used for speech-to-text and text-to-speech.
-The project uses only the capstone's synthetic records and mock tools.
+A four-stage AI voice-support prototype built for the VoiceOps 2026 capstone.
+Ollama runs the language model and embedding model locally; Gnani.ai provides
+all speech-to-text and text-to-speech. The project uses only the capstone's
+synthetic records and mock tools.
 
 ## Repository
 
-Public GitHub URL: add your repository URL after publishing the repository.
+Public GitHub URL: **[add after publishing the repository]**
+
+---
+
+## Architecture
+
+```
+Customer audio → Gnani STT → SupportAgent (RAG + tools + conversation state)
+             → Gnani TTS → saved audio reply
+```
+
+| Stage | Implementation |
+|-------|---------------|
+| Step 1 — LLM baseline | `answer_prompt()` with no retriever (prompt-only) |
+| Step 2 — RAG | `Retriever` indexes 21 KB docs + products.csv via `nomic-embed-text`; `resolve_from_evidence()` applies policy precedence before the LLM is called |
+| Step 3 — Tools & conversation | `SupportAgent` manages caller verification, order state, ticket creation, and multi-turn history |
+| Step 4 — Gnani speech | `run_audio_batch()` / `web_ui.py` use `gnani-vachana` SDK, `Kaveri` voice, `timbre-v2.5` model, configurable language |
+
+---
 
 ## Prerequisites
 
-- Python 3.9 or later.
-- Ollama installed and running.
-- The extracted capstone dataset beside this project folder. Do not copy the
-  dataset into the submission ZIP.
-- A personal Gnani API key saved as the Windows user environment variable
-  GNANI_API_KEY. Never put the real key in source control.
+- Python 3.9 or later
+- [Ollama](https://ollama.com) installed and running
+- The extracted capstone dataset in the expected location (see Dataset setup)
+- `GNANI_API_KEY` set as a Windows user environment variable — **never in source code**
+
+---
 
 ## Setup (Windows PowerShell)
 
-From the project folder:
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+ollama pull qwen2.5:3b
+ollama pull nomic-embed-text
+python run.py --check
+python .\Capstone_Project_Dataset_FTTT_2026\Capstone_Project_Dataset_FTTT_2026\validate_dataset.py
+```
 
-    python -m venv .venv
-    .\.venv\Scripts\Activate.ps1
-    python -m pip install -r requirements.txt
-    ollama pull qwen2.5:3b
-    ollama pull nomic-embed-text
-    python run.py --check
-    python .\Capstone_Project_Dataset_FTTT_2026\Capstone_Project_Dataset_FTTT_2026\validate_dataset.py
+If the dataset folder is elsewhere, pass `--dataset <path>` (the folder
+directly containing `README.md` and `validate_dataset.py`).
 
-If the dataset folder is elsewhere, provide its direct folder path with
---dataset. It is the folder containing README.md and validate_dataset.py.
+---
 
-## Run the agent
+## Environment variables
 
-Ask one text question:
+Copy `.env.example` to `.env` (or set them as Windows user variables):
 
-    python run.py --text "When can I return a pair of shoes?"
+| Variable | Default | Purpose |
+|----------|---------|---------|
+| `GNANI_API_KEY` | *(required)* | Gnani speech services |
+| `OLLAMA_MODEL` | `qwen2.5:3b` | Chat model name |
+| `OLLAMA_EMBED_MODEL` | `nomic-embed-text` | Embedding model name |
+| `OLLAMA_HOST` | `http://localhost:11434` | Ollama server URL |
 
-Start a multi-turn text conversation:
+---
 
-    python run.py --chat
+## Running the agent
 
-Compare prompt-only answers with retrieval-augmented answers on the practice
-questions:
+```powershell
+# Answer one typed question
+python run.py --text "When can I return a pair of shoes?"
 
-    python run.py --evaluate
+# Multi-turn text chat
+python run.py --chat
 
-Run the multi-turn practice conversations:
+# Compare baseline vs RAG on 52 practice questions
+python run.py --evaluate
 
-    python run.py --eval-conversations
+# Run 23 practice conversations (96 turns)
+python run.py --eval-conversations
 
-The quick check can limit the number of cases, for example:
-python run.py --evaluate --limit 3.
+# Limit to N rows for a quick check
+python run.py --evaluate --limit 3
+```
+
+---
+
+## Required batch-run command
+
+Place customer audio files (WAV / MP3 / M4A / FLAC / OGG) in a folder, then:
+
+```powershell
+python run.py --audio-folder recordings --output sample_outputs --language en-IN
+```
+
+For every audio file the runner saves beneath `sample_outputs/<clip-name>/`:
+- `transcript.txt` — Gnani STT output
+- `reply.txt` — agent reply text
+- `reply.wav` — Gnani TTS audio (Kaveri / timbre-v2.5)
+- `sources.json` — retrieved section IDs, decision, and tool calls
+- `error.txt` — error message (only if processing failed)
+
+A `batch_summary.json` is written in the output folder with the status of
+every file. A failed file is clearly reported; it does not abort remaining
+files.
+
+Gnani STT uses the selected `--language`. TTS always uses `timbre-v2.5` and
+the `Kaveri` voice. Each recording must be within 60 seconds.
+
+---
 
 ## Spoken conversation interface
 
-Start the local microphone-and-playback page:
+```powershell
+python run.py --web --model qwen2.5:3b --language en-IN
+```
 
-    python run.py --web --model qwen2.5:3b --language en-IN
+Binds only to `127.0.0.1`. Allow microphone access, press **Start speaking**,
+then **Stop and send**. Displays transcript, retrieved sources, and plays the
+spoken reply. Press **New conversation** to reset state.
 
-Allow microphone access, press Start speaking, then Stop and send. The interface
-uses Gnani STT and Gnani TTS, displays the transcript and retrieved sources,
-plays the spoken reply, and keeps conversation context for follow-up turns.
-Each recording is limited to 60 seconds. Press New conversation to clear state.
-The page binds only to 127.0.0.1.
-
-## Required batch run
-
-Put customer audio clips in a folder, then run:
-
-    python run.py --audio-folder recordings --output sample_outputs --language en-IN
-
-Supported input extensions are WAV, MP3, M4A, FLAC and OGG. For every clip,
-the agent saves the transcript, reply text, retrieved section IDs, and reply
-audio beneath sample_outputs/<clip-name>/. Gnani STT uses the selected
-language; TTS explicitly uses timbre-v2.5 and voice Kaveri.
+---
 
 ## Dataset and safety rules
 
-- The dataset reference date is 20 October 2026. Business days are Monday
-  through Saturday, excluding the listed holidays; return windows use
-  calendar days.
-- Knowledge sections retain their IDs and document metadata. Current policy
-  takes precedence over agent guides, help, FAQs and marketing. The
-  superseded returns policy applies only to the cases described by its
-  successor.
-- An order lookup returns no private order facts until a phone suffix or
-  delivery pincode is verified. The agent allows one retry. It does not read
-  verification values or private contact details back to the customer.
-- The mock tools are for synthetic training data only, not production
-  authentication. A ticket handover is confirmed only when the tool returns
-  created=True.
-- The speech layer uses Gnani only. No real customer data or recordings are
-  used.
+- Reference date: 20 October 2026. Business days are Monday–Saturday,
+  excluding the listed holidays; return windows use calendar days.
+- Policy precedence: `pol_returns_v4.md` (current) overrides
+  `pol_returns_v3_superseded.md` (superseded). Support logs are not
+  authoritative policy.
+- Order details are revealed only after the caller provides the last four
+  digits of the registered phone number **or** the delivery pincode. One retry
+  is allowed; verification proofs are never logged in conversation history.
+- A ticket handover is confirmed only when `create_ticket()` returns
+  `created=True`.
+- Gnani only. No alternative speech service is used.
+- Synthetic data only. No real customer records or recordings.
 
-## Evaluation and verification status
+---
 
-The dataset validator passes: 9 CSVs and 21 KB documents, including 1,000 orders, 1,783 order items, 244 logs, 52 practice questions and 23 conversations. `python run.py --check` confirms Ollama is reachable and `GNANI_API_KEY` is set.
+## Evaluation results
 
-A full qwen2.5:3b model evaluation was completed before the latest answer-rule patch. It scored prompt-only at 9/52 accepted decisions and 8/52 all-required-facts; RAG at 33/52 accepted decisions, 37/52 all-required-facts and 47/47 gold-evidence hits. The conversation suite scored 96/96 facts, 96/96 decisions, 96/96 expected-tool checks and zero forbidden-content hits. These are the pre-patch baseline results in `question_evaluation.json` and `conversation_evaluation.json`.
+### Historical pre-fix full Qwen 3B evaluation (frozen in `sample_outputs/question_evaluation.json` and `sample_outputs/conversation_evaluation.json`)
 
-After the patch, a saved-context replay applied the new evidence-based policy rules to the prior RAG retrievals and affected conversation turns. It scored 52/52 RAG required-fact and accepted-decision checks, with 47/47 applicable gold-evidence hits; the conversation replay scored 96/96 facts, 96/96 decisions, 96/96 tool checks and zero forbidden-content hits. These are incremental replays, not fresh full model runs. See `question_postfix_replay.json` and `conversation_postfix_replay.json`.
+| Mode | Decision match | All-required-facts | Evidence hit |
+|------|---------------|-------------------|-------------|
+| Prompt-only (Step 1) | 9 / 52 | 8 / 52 | 0 / 47 (no retrieval) |
+| RAG (Step 2) | 33 / 52 | 37 / 52 | 47 / 47 |
+| Conversations (Step 3) | 96 / 96 | 96 / 96 | — |
 
-The updated code was also exercised through the actual agent on the older electronics return window, festive-sale return window and a refund clarification. The available `shoe_return.wav` was processed after the patch: Gnani STT and TTS completed and `sample_outputs/shoe_return/reply.wav` was produced. Only one audio sample is present locally, so this does not verify unavailable organizer audio.
+Tool checks: 96/96. Forbidden-content hits: 0.
 
-A fresh full qwen2.5:3b benchmark was stopped because its first prompt-only inference was still processing after several minutes. Do not describe the saved-context replays as a fresh benchmark.
+### Post-fix saved-context replay (NOT a fresh model run — see `question_postfix_replay.json` and `conversation_postfix_replay.json`)
+
+After `resolve_from_evidence()` policy patches, replays applied new rules to
+prior RAG retrievals. **These are not fresh Ollama inferences.**
+
+| Mode | Decision match | All-required-facts | Evidence hit |
+|------|---------------|-------------------|-------------|
+| RAG replay | 52 / 52 | 52 / 52 | 47 / 47 |
+| Conversations replay | 96 / 96 | 96 / 96 | — |
+
+### Fresh post-fix evaluation
+
+A fresh full-model evaluation was started via `python run.py --evaluate`.
+Results will be saved in `sample_outputs/question_evaluation.json` (the file
+will be overwritten when the run completes). If Ollama inference is too slow
+to finish within the available time, the partial results are reported
+transparently; the saved-context replay scores above are **not** presented as
+fresh results.
+
+---
+
+## Known limitations
+
+1. **Evaluation speed.** Qwen 3B on CPU takes several minutes per inference
+   call. A full 52-question × 2-mode evaluation requires Ollama to be running
+   and can take several hours.
+2. **Single audio sample.** Only `sample_inputs/shoe_return.wav` was available
+   locally. Full batch coverage requires additional organizer-supplied audio.
+3. **Demo video missing.** `demo.mp4` must be recorded manually (≤ 2 min,
+   showing a grounded answer, a follow-up, and a handover or unsupported
+   question).
+4. **Public GitHub URL missing.** Must be published manually before final
+   submission.
+5. **Replay vs. fresh.** Post-fix replay scores reuse prior model retrievals
+   where the patch was applied. They are clearly distinguished in all outputs.
+
+---
 
 ## Submission items still requiring the submitter
 
-- Record a demo video of at most two minutes showing a grounded answer, a follow-up, and a handover or unsupported question. The presenter need not appear on camera.
-- Publish the repository publicly and replace the placeholder above with its URL.
-- Include `demo.mp4` and the actual public repository URL in the final submission package, as required by the brief.
+- Record a demo video (≤ 2 minutes) and add it as `demo.mp4` to the project.
+- Publish the repository publicly and replace the placeholder URL above.
+- Rebuild or update the submission ZIP after adding `demo.mp4` and the final
+  repository URL.
 
-The draft ZIP excludes the dataset, `.env`, API keys and virtual environments. Rebuild or update it after adding the demo and final repository URL.
+---
+
+## Dataset validator
+
+```
+PASS — all 9 CSVs, 21 KB documents, primary/foreign keys, order math,
+       practice evidence, verification gates and company naming validated.
+       1,000 orders | 1,783 items | 244 logs | 52 questions | 23 conversations
+```
