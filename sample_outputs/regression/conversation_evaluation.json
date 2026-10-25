@@ -1,0 +1,541 @@
+[
+  {
+    "conversation_id": "PC010",
+    "turn": 1,
+    "scenario": "refund_status",
+    "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Sure—what do you need help with regarding your order: tracking, delivery, a return, a refund, or something else?",
+    "sources": [],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC010",
+    "turn": 2,
+    "scenario": "refund_status",
+    "customer_message": "Order number hai [verification redacted] [verification redacted].",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=16640894)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=16640894)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC010",
+    "turn": 3,
+    "scenario": "refund_status",
+    "customer_message": "Last four digits [verification redacted] hain.",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "Thanks, your order is verified. What would you like help with next?",
+    "sources": [
+      "IDV-2"
+    ],
+    "tool_calls": [
+      "lookup_order(order_id=16640894, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=16640894, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 0,
+    "required_met": 0,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC010",
+    "turn": 4,
+    "scenario": "refund_status",
+    "customer_message": "Mera refund kahan hai?",
+    "expected_decision": "escalate",
+    "decision": "escalate",
+    "reply": "I’m handing this to a human colleague. Your reference number is TKT848c033344d54daebea64255d099ab51.",
+    "sources": [
+      "ESC-1",
+      "ESC-2",
+      "ESC-3"
+    ],
+    "tool_calls": [
+      "create_ticket()"
+    ],
+    "expected_tool_calls": "create_ticket()",
+    "tool_ok": true,
+    "required_total": 2,
+    "required_met": 2,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC011",
+    "turn": 1,
+    "scenario": "where_is_my_order",
+    "customer_message": "Hi, my order hasn't arrived yet. Where is it?",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Please share your order number so I can check its delivery status. I will verify the order before discussing its details.",
+    "sources": [
+      "IDV-2"
+    ],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC011",
+    "turn": 2,
+    "scenario": "where_is_my_order",
+    "customer_message": "The order number is [verification redacted] [verification redacted].",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=26295015)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=26295015)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC011",
+    "turn": 3,
+    "scenario": "where_is_my_order",
+    "customer_message": "The last four digits are [verification redacted].",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "Your order is currently shipped and is expected to be delivered by 22 October 2026.",
+    "sources": [
+      "lookup_order"
+    ],
+    "tool_calls": [
+      "lookup_order(order_id=26295015, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=26295015, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC011",
+    "turn": 4,
+    "scenario": "where_is_my_order",
+    "customer_message": "And what if I'm not at home?",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "The courier makes up to 3 delivery attempts. After a failed attempt, you receive an SMS to reschedule; after the third failed attempt, the parcel is returned to the warehouse.",
+    "sources": [
+      "DEL-3"
+    ],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC012",
+    "turn": 1,
+    "scenario": "where_is_my_order",
+    "customer_message": "Hi, my order hasn't arrived yet. Where is it?",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Please share your order number so I can check its delivery status. I will verify the order before discussing its details.",
+    "sources": [
+      "IDV-2"
+    ],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC012",
+    "turn": 2,
+    "scenario": "where_is_my_order",
+    "customer_message": "The order number is [verification redacted] [verification redacted].",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=75447568)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=75447568)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC012",
+    "turn": 3,
+    "scenario": "where_is_my_order",
+    "customer_message": "The last four digits are [verification redacted].",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "Your order is currently shipped and is expected to be delivered by 24 October 2026.",
+    "sources": [
+      "lookup_order"
+    ],
+    "tool_calls": [
+      "lookup_order(order_id=75447568, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=75447568, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC012",
+    "turn": 4,
+    "scenario": "where_is_my_order",
+    "customer_message": "And what if I'm not at home?",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "The courier makes up to 3 delivery attempts. After a failed attempt, you receive an SMS to reschedule; after the third failed attempt, the parcel is returned to the warehouse.",
+    "sources": [
+      "DEL-3"
+    ],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC019",
+    "turn": 1,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "Hello, mujhe order ke baare mein help chahiye.",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Sure—what do you need help with regarding your order: tracking, delivery, a return, a refund, or something else?",
+    "sources": [],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC019",
+    "turn": 2,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "Order number hai [verification redacted] [verification redacted].",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=15911102)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=15911102)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC019",
+    "turn": 3,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "Pincode [verification redacted] hai.",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "Thanks, your order is verified. What would you like help with next?",
+    "sources": [
+      "IDV-2"
+    ],
+    "tool_calls": [
+      "lookup_order(order_id=15911102, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=15911102, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 0,
+    "required_met": 0,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC019",
+    "turn": 4,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "Mujhe ise cancel karna hai.",
+    "expected_decision": "refuse",
+    "decision": "refuse",
+    "reply": "Is order ko ship hone ke baad cancel nahi kiya ja sakta. Aap delivery par parcel refuse kar sakte hain. Prepaid refund parcel warehouse pahunchne ke baad initiate hota hai, usually last delivery attempt ke 7 se 10 calendar days baad. After initiation, the refund takes 1 to 3 business days for your original payment method.",
+    "sources": [
+      "CAN-2",
+      "REF-1",
+      "REF-2"
+    ],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 2,
+    "required_met": 2,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC020",
+    "turn": 1,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "Hi, I need some help with an order.",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Sure—what do you need help with regarding your order: tracking, delivery, a return, a refund, or something else?",
+    "sources": [],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC020",
+    "turn": 2,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "The order number is [verification redacted] [verification redacted].",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=43165903)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=43165903)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC020",
+    "turn": 3,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "My pincode is [verification redacted].",
+    "expected_decision": "answer",
+    "decision": "answer",
+    "reply": "Thanks, your order is verified. What would you like help with next?",
+    "sources": [
+      "IDV-2"
+    ],
+    "tool_calls": [
+      "lookup_order(order_id=43165903, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=43165903, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 0,
+    "required_met": 0,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC020",
+    "turn": 4,
+    "scenario": "cancel_shipped_order",
+    "customer_message": "I want to cancel it.",
+    "expected_decision": "refuse",
+    "decision": "refuse",
+    "reply": "This order has shipped, so it cannot be cancelled. You may refuse the parcel at the door. For a prepaid order, the refund is initiated after the parcel reaches the warehouse, usually 7 to 10 calendar days after the last delivery attempt.",
+    "sources": [
+      "CAN-2",
+      "REF-1"
+    ],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 2,
+    "required_met": 2,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC021",
+    "turn": 1,
+    "scenario": "failed_verification",
+    "customer_message": "नमस्ते, मुझे अपने ऑर्डर के बारे में मदद चाहिए।",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Sure—what do you need help with regarding your order: tracking, delivery, a return, a refund, or something else?",
+    "sources": [],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC021",
+    "turn": 2,
+    "scenario": "failed_verification",
+    "customer_message": "ऑर्डर नंबर है [verification redacted] [verification redacted]।",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=77461439)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=77461439)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC021",
+    "turn": 3,
+    "scenario": "failed_verification",
+    "customer_message": "आख़िरी चार अंक [verification redacted] हैं।",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "That did not match. Please try once more with the phone's last four digits or the delivery pincode.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=77461439, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=77461439, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC021",
+    "turn": 4,
+    "scenario": "failed_verification",
+    "customer_message": "आख़िरी चार अंक [verification redacted] हैं।",
+    "expected_decision": "refuse",
+    "decision": "refuse",
+    "reply": "I couldn't verify the order, so I can't share its details. Please contact support from the registered phone number.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=77461439, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=77461439, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC022",
+    "turn": 1,
+    "scenario": "failed_verification",
+    "customer_message": "नमस्ते, मुझे अपने ऑर्डर के बारे में मदद चाहिए।",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "Hi, I’m ZentroMart’s AI support assistant. Sure—what do you need help with regarding your order: tracking, delivery, a return, a refund, or something else?",
+    "sources": [],
+    "tool_calls": [],
+    "expected_tool_calls": "",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC022",
+    "turn": 2,
+    "scenario": "failed_verification",
+    "customer_message": "ऑर्डर नंबर है [verification redacted] [verification redacted]।",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "For privacy, share either the registered phone's last four digits or the delivery pincode for that order.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=56646891)"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=56646891)",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC022",
+    "turn": 3,
+    "scenario": "failed_verification",
+    "customer_message": "आख़िरी चार अंक [verification redacted] हैं।",
+    "expected_decision": "clarify",
+    "decision": "clarify",
+    "reply": "That did not match. Please try once more with the phone's last four digits or the delivery pincode.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=56646891, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=56646891, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  },
+  {
+    "conversation_id": "PC022",
+    "turn": 4,
+    "scenario": "failed_verification",
+    "customer_message": "आख़िरी चार अंक [verification redacted] हैं।",
+    "expected_decision": "refuse",
+    "decision": "refuse",
+    "reply": "I couldn't verify the order, so I can't share its details. Please contact support from the registered phone number.",
+    "sources": [],
+    "tool_calls": [
+      "lookup_order(order_id=56646891, verification_value=[redacted])"
+    ],
+    "expected_tool_calls": "lookup_order(order_id=56646891, verification_value=[verification redacted])",
+    "tool_ok": true,
+    "required_total": 1,
+    "required_met": 1,
+    "all_required_met": true,
+    "forbidden_hits": []
+  }
+]

@@ -1,0 +1,12 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.cache/
+tools/tickets_created.csv
+# The capstone dataset must stay outside the public repository and submission ZIP.
+Capstone_Project_Dataset_FTTT_2026/
+dataset/
+# Personal recordings are not part of the sample deliverables.
+recordings/
