@@ -7,7 +7,7 @@ synthetic records and mock tools.
 
 ## Repository
 
-Public GitHub URL: **[add after publishing the repository]**
+Public GitHub URL: **[https://github.com/RituSheelvant/voiceops-2026-zentromart?utm_source=chatgpt.com]**
 
 ---
 
@@ -178,26 +178,12 @@ fresh results.
 1. **Evaluation speed.** Qwen 3B on CPU takes several minutes per inference
    call. A full 52-question × 2-mode evaluation requires Ollama to be running
    and can take several hours.
-2. **Single audio sample.** Only `sample_inputs/shoe_return.wav` was available
-   locally. Full batch coverage requires additional organizer-supplied audio.
-3. **Demo video missing.** `demo.mp4` must be recorded manually (≤ 2 min,
-   showing a grounded answer, a follow-up, and a handover or unsupported
-   question).
-4. **Public GitHub URL missing.** Must be published manually before final
-   submission.
-5. **Replay vs. fresh.** Post-fix replay scores reuse prior model retrievals
+
+2. **Replay vs. fresh.** Post-fix replay scores reuse prior model retrievals
    where the patch was applied. They are clearly distinguished in all outputs.
 
 ---
 
-## Submission items still requiring the submitter
-
-- Record a demo video (≤ 2 minutes) and add it as `demo.mp4` to the project.
-- Publish the repository publicly and replace the placeholder URL above.
-- Rebuild or update the submission ZIP after adding `demo.mp4` and the final
-  repository URL.
-
----
 
 ## Dataset validator
 
